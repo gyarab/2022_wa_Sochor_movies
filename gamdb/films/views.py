@@ -17,6 +17,18 @@ def movies(request):
     }
     return render(request, 'movies.html', context)
 
+def actors(request):
+    context = {
+        "actors": Movie.objects.all()
+    }
+    return render(request, 'actors.html', context)
+
+def actor(request, id):
+    context = {
+        "actor": Movie.objects.get(id=id)
+    }
+    return render(request, 'actor.html', context)
+
 def homepage(request):
     context = {
         # TODO use first 10 top rated
