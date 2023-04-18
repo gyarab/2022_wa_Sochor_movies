@@ -1,0 +1,30 @@
+- model: films.movie
+  pk: 1
+  fields:
+    name: Top Gun
+    year: 2022
+    description: nejwifds
+- model: films.movie
+  pk: 2
+  fields:
+    name: Shrek
+    year: 2006
+    description: dgzsada
+- model: films.movie
+  pk: 3
+  fields:
+    name: Pulp Fiction
+    year: 1994
+    description: fdahgfsdhafafa
+- model: films.movie
+  pk: 4
+  fields:
+    name: Fight Club
+    year: 1999
+    description: ssfafafsafasfafa
+- model: films.movie
+  pk: 5
+  fields:
+    name: Samotáøi
+    year: 2000
+    description: dsajhhdadaadas
