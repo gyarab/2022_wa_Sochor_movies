@@ -11,13 +11,13 @@
     {% for actor in actors %}
     <div class="col">
         <div class="card h-100">
-            <img class="card-img-top" src={% if actor.photo_url %}{{actor.photo_url}}{% else %} "https://place-hold.it/180x100/" alt="Card image cap">
+            <img class="card-img-top" src="{% if actor.photo_url %}{{actor.photo_url}}{% else %}https://place-hold.it/180x100/{% endif %}" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">{{ actors.name }}</h5>
-                <p class="card-text ">{{ actors.description | truncateworlds_html:10 | safe }}</p>
+                <h5 class="card-title">{{ actor.name }}</h5>
+                <p class="card-text ">{{ actor.description|truncatewords_html:10|safe }}</p>
             </div>
             <div class="card-footer text-end">
-                <a href="#" class="btn btn-primary">Detaily</a>
+                <a href="{% url 'actor' actor.id %}" class="btn btn-primary">Detail</a>
             </div>
         </div>
     </div>
